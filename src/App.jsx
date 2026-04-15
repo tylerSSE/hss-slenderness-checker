@@ -8,17 +8,17 @@ const E = 29000; // ksi - Modulus of Elasticity
 
 // Steel grade properties
 const STEEL_GRADES = {
-  'A500-B': { 
-    label: 'ASTM A500 Gr. B', 
-    Fy_rect: 46, 
-    Fy_round: 42,
+  'A500-B': {
+    label: 'ASTM A500 Gr. B',
+    Fy_rect: 46,
+    Fy_round: 46,
     tdes_factor: 0.93,
     description: 'Cold-formed welded HSS'
   },
-  'A500-C': { 
-    label: 'ASTM A500 Gr. C', 
-    Fy_rect: 50, 
-    Fy_round: 46,
+  'A500-C': {
+    label: 'ASTM A500 Gr. C',
+    Fy_rect: 50,
+    Fy_round: 50,
     tdes_factor: 0.93,
     description: 'Cold-formed welded HSS'
   },
@@ -147,19 +147,6 @@ const SQUARE_HSS = [
   { name: "HSS3x3x1/4", H: 3.0, B: 3.0, tnom: 0.25 },
   { name: "HSS3x3x3/16", H: 3.0, B: 3.0, tnom: 0.1875 },
   { name: "HSS3x3x1/8", H: 3.0, B: 3.0, tnom: 0.125 },
-  { name: "HSS2-1/2x2-1/2x5/16", H: 2.5, B: 2.5, tnom: 0.3125 },
-  { name: "HSS2-1/2x2-1/2x1/4", H: 2.5, B: 2.5, tnom: 0.25 },
-  { name: "HSS2-1/2x2-1/2x3/16", H: 2.5, B: 2.5, tnom: 0.1875 },
-  { name: "HSS2-1/2x2-1/2x1/8", H: 2.5, B: 2.5, tnom: 0.125 },
-  { name: "HSS2-1/4x2-1/4x1/4", H: 2.25, B: 2.25, tnom: 0.25 },
-  { name: "HSS2-1/4x2-1/4x3/16", H: 2.25, B: 2.25, tnom: 0.1875 },
-  { name: "HSS2-1/4x2-1/4x1/8", H: 2.25, B: 2.25, tnom: 0.125 },
-  { name: "HSS2x2x1/4", H: 2.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS2x2x3/16", H: 2.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS2x2x1/8", H: 2.0, B: 2.0, tnom: 0.125 },
-  { name: "HSS1-1/2x1-1/2x1/4", H: 1.5, B: 1.5, tnom: 0.25 },
-  { name: "HSS1-1/2x1-1/2x3/16", H: 1.5, B: 1.5, tnom: 0.188 },
-  { name: "HSS1-1/2x1-1/2x1/8", H: 1.5, B: 1.5, tnom: 0.125 },
 ];
 
 const RECT_HSS = [
@@ -365,9 +352,6 @@ const RECT_HSS = [
   { name: "HSS12x3x5/16", H: 12.0, B: 3.0, tnom: 0.3125 },
   { name: "HSS12x3x1/4", H: 12.0, B: 3.0, tnom: 0.25 },
   { name: "HSS12x3x3/16", H: 12.0, B: 3.0, tnom: 0.1875 },
-  { name: "HSS12x2x5/16", H: 12.0, B: 2.0, tnom: 0.3125 },
-  { name: "HSS12x2x1/4", H: 12.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS12x2x3/16", H: 12.0, B: 2.0, tnom: 0.1875 },
   { name: "HSS10x8x5/8", H: 10.0, B: 8.0, tnom: 0.625 },
   { name: "HSS10x8x1/2", H: 10.0, B: 8.0, tnom: 0.5 },
   { name: "HSS10x8x3/8", H: 10.0, B: 8.0, tnom: 0.375 },
@@ -399,11 +383,6 @@ const RECT_HSS = [
   { name: "HSS10x3x1/4", H: 10.0, B: 3.0, tnom: 0.25 },
   { name: "HSS10x3x3/16", H: 10.0, B: 3.0, tnom: 0.1875 },
   { name: "HSS10x3x1/8", H: 10.0, B: 3.0, tnom: 0.125 },
-  { name: "HSS10x2x3/8", H: 10.0, B: 2.0, tnom: 0.375 },
-  { name: "HSS10x2x5/16", H: 10.0, B: 2.0, tnom: 0.3125 },
-  { name: "HSS10x2x1/4", H: 10.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS10x2x3/16", H: 10.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS10x2x1/8", H: 10.0, B: 2.0, tnom: 0.125 },
   { name: "HSS9x7x5/8", H: 9.0, B: 7.0, tnom: 0.625 },
   { name: "HSS9x7x1/2", H: 9.0, B: 7.0, tnom: 0.5 },
   { name: "HSS9x7x3/8", H: 9.0, B: 7.0, tnom: 0.375 },
@@ -440,12 +419,6 @@ const RECT_HSS = [
   { name: "HSS8x3x1/4", H: 8.0, B: 3.0, tnom: 0.25 },
   { name: "HSS8x3x3/16", H: 8.0, B: 3.0, tnom: 0.1875 },
   { name: "HSS8x3x1/8", H: 8.0, B: 3.0, tnom: 0.125 },
-  { name: "HSS8x2x1/2", H: 8.0, B: 2.0, tnom: 0.5 },
-  { name: "HSS8x2x3/8", H: 8.0, B: 2.0, tnom: 0.375 },
-  { name: "HSS8x2x5/16", H: 8.0, B: 2.0, tnom: 0.3125 },
-  { name: "HSS8x2x1/4", H: 8.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS8x2x3/16", H: 8.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS8x2x1/8", H: 8.0, B: 2.0, tnom: 0.125 },
   { name: "HSS7x5x1/2", H: 7.0, B: 5.0, tnom: 0.5 },
   { name: "HSS7x5x3/8", H: 7.0, B: 5.0, tnom: 0.375 },
   { name: "HSS7x5x5/16", H: 7.0, B: 5.0, tnom: 0.3125 },
@@ -464,9 +437,6 @@ const RECT_HSS = [
   { name: "HSS7x3x1/4", H: 7.0, B: 3.0, tnom: 0.25 },
   { name: "HSS7x3x3/16", H: 7.0, B: 3.0, tnom: 0.1875 },
   { name: "HSS7x3x1/8", H: 7.0, B: 3.0, tnom: 0.125 },
-  { name: "HSS7x2x1/4", H: 7.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS7x2x3/16", H: 7.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS7x2x1/8", H: 7.0, B: 2.0, tnom: 0.125 },
   { name: "HSS6x5x1/2", H: 6.0, B: 5.0, tnom: 0.5 },
   { name: "HSS6x5x3/8", H: 6.0, B: 5.0, tnom: 0.375 },
   { name: "HSS6x5x5/16", H: 6.0, B: 5.0, tnom: 0.3125 },
@@ -485,11 +455,6 @@ const RECT_HSS = [
   { name: "HSS6x3x1/4", H: 6.0, B: 3.0, tnom: 0.25 },
   { name: "HSS6x3x3/16", H: 6.0, B: 3.0, tnom: 0.1875 },
   { name: "HSS6x3x1/8", H: 6.0, B: 3.0, tnom: 0.125 },
-  { name: "HSS6x2x3/8", H: 6.0, B: 2.0, tnom: 0.375 },
-  { name: "HSS6x2x5/16", H: 6.0, B: 2.0, tnom: 0.3125 },
-  { name: "HSS6x2x1/4", H: 6.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS6x2x3/16", H: 6.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS6x2x1/8", H: 6.0, B: 2.0, tnom: 0.125 },
   { name: "HSS5x4x1/2", H: 5.0, B: 4.0, tnom: 0.5 },
   { name: "HSS5x4x3/8", H: 5.0, B: 4.0, tnom: 0.375 },
   { name: "HSS5x4x5/16", H: 5.0, B: 4.0, tnom: 0.3125 },
@@ -502,66 +467,11 @@ const RECT_HSS = [
   { name: "HSS5x3x1/4", H: 5.0, B: 3.0, tnom: 0.25 },
   { name: "HSS5x3x3/16", H: 5.0, B: 3.0, tnom: 0.1875 },
   { name: "HSS5x3x1/8", H: 5.0, B: 3.0, tnom: 0.125 },
-  { name: "HSS5x2-1/2x1/4", H: 5.0, B: 2.5, tnom: 0.25 },
-  { name: "HSS5x2-1/2x3/16", H: 5.0, B: 2.5, tnom: 0.1875 },
-  { name: "HSS5x2-1/2x1/8", H: 5.0, B: 2.5, tnom: 0.125 },
-  { name: "HSS5x2x3/8", H: 5.0, B: 2.0, tnom: 0.375 },
-  { name: "HSS5x2x5/16", H: 5.0, B: 2.0, tnom: 0.3125 },
-  { name: "HSS5x2x1/4", H: 5.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS5x2x3/16", H: 5.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS5x2x1/8", H: 5.0, B: 2.0, tnom: 0.125 },
   { name: "HSS4x3x3/8", H: 4.0, B: 3.0, tnom: 0.375 },
   { name: "HSS4x3x5/16", H: 4.0, B: 3.0, tnom: 0.3125 },
   { name: "HSS4x3x1/4", H: 4.0, B: 3.0, tnom: 0.25 },
   { name: "HSS4x3x3/16", H: 4.0, B: 3.0, tnom: 0.1875 },
   { name: "HSS4x3x1/8", H: 4.0, B: 3.0, tnom: 0.125 },
-  { name: "HSS4x2-1/2x1/4", H: 4.0, B: 2.5, tnom: 0.25 },
-  { name: "HSS4x2-1/2x3/16", H: 4.0, B: 2.5, tnom: 0.1875 },
-  { name: "HSS4x2-1/2x1/8", H: 4.0, B: 2.5, tnom: 0.125 },
-  { name: "HSS4x2x3/8", H: 4.0, B: 2.0, tnom: 0.375 },
-  { name: "HSS4x2x5/16", H: 4.0, B: 2.0, tnom: 0.3125 },
-  { name: "HSS4x2x1/4", H: 4.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS4x2x3/16", H: 4.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS4x2x1/8", H: 4.0, B: 2.0, tnom: 0.125 },
-  { name: "HSS4x1-1/2x1/4", H: 4.0, B: 1.5, tnom: 0.25 },
-  { name: "HSS4x1-1/2x3/16", H: 4.0, B: 1.5, tnom: 0.1875 },
-  { name: "HSS4x1-1/2x1/8", H: 4.0, B: 1.5, tnom: 0.125 },
-  { name: "HSS3-1/2x2-1/2x3/8", H: 3.5, B: 2.5, tnom: 0.375 },
-  { name: "HSS3-1/2x2-1/2x5/16", H: 3.5, B: 2.5, tnom: 0.3125 },
-  { name: "HSS3-1/2x2-1/2x1/4", H: 3.5, B: 2.5, tnom: 0.25 },
-  { name: "HSS3-1/2x2-1/2x3/16", H: 3.5, B: 2.5, tnom: 0.1875 },
-  { name: "HSS3-1/2x2-1/2x1/8", H: 3.5, B: 2.5, tnom: 0.125 },
-  { name: "HSS3-1/2x2x1/4", H: 3.5, B: 2.0, tnom: 0.25 },
-  { name: "HSS3-1/2x2x3/16", H: 3.5, B: 2.0, tnom: 0.1875 },
-  { name: "HSS3-1/2x2x1/8", H: 3.5, B: 2.0, tnom: 0.125 },
-  { name: "HSS3-1/2x1-1/2x1/4", H: 3.5, B: 1.5, tnom: 0.25 },
-  { name: "HSS3-1/2x1-1/2x3/16", H: 3.5, B: 1.5, tnom: 0.1875 },
-  { name: "HSS3-1/2x1-1/2x1/8", H: 3.5, B: 1.5, tnom: 0.125 },
-  { name: "HSS3x2-1/2x5/16", H: 3.0, B: 2.5, tnom: 0.3125 },
-  { name: "HSS3x2-1/2x1/4", H: 3.0, B: 2.5, tnom: 0.25 },
-  { name: "HSS3x2-1/2x3/16", H: 3.0, B: 2.5, tnom: 0.1875 },
-  { name: "HSS3x2-1/2x1/8", H: 3.0, B: 2.5, tnom: 0.125 },
-  { name: "HSS3x2x5/16", H: 3.0, B: 2.0, tnom: 0.3125 },
-  { name: "HSS3x2x1/4", H: 3.0, B: 2.0, tnom: 0.25 },
-  { name: "HSS3x2x3/16", H: 3.0, B: 2.0, tnom: 0.1875 },
-  { name: "HSS3x2x1/8", H: 3.0, B: 2.0, tnom: 0.125 },
-  { name: "HSS3x1-1/2x1/4", H: 3.0, B: 1.5, tnom: 0.25 },
-  { name: "HSS3x1-1/2x3/16", H: 3.0, B: 1.5, tnom: 0.1875 },
-  { name: "HSS3x1-1/2x1/8", H: 3.0, B: 1.5, tnom: 0.125 },
-  { name: "HSS3x1x3/16", H: 3.0, B: 1.0, tnom: 0.1875 },
-  { name: "HSS3x1x1/8", H: 3.0, B: 1.0, tnom: 0.125 },
-  { name: "HSS2-1/2x2x1/4", H: 2.5, B: 2.0, tnom: 0.25 },
-  { name: "HSS2-1/2x2x3/16", H: 2.5, B: 2.0, tnom: 0.1875 },
-  { name: "HSS2-1/2x2x1/8", H: 2.5, B: 2.0, tnom: 0.125 },
-  { name: "HSS2-1/2x1-1/2x1/4", H: 2.5, B: 1.5, tnom: 0.25 },
-  { name: "HSS2-1/2x1-1/2x3/16", H: 2.5, B: 1.5, tnom: 0.1875 },
-  { name: "HSS2-1/2x1-1/2x1/8", H: 2.5, B: 1.5, tnom: 0.125 },
-  { name: "HSS2-1/2x1x3/16", H: 2.5, B: 1.0, tnom: 0.1875 },
-  { name: "HSS2-1/2x1x1/8", H: 2.5, B: 1.0, tnom: 0.125 },
-  { name: "HSS2x1-1/2x3/16", H: 2.0, B: 1.5, tnom: 0.1875 },
-  { name: "HSS2x1-1/2x1/8", H: 2.0, B: 1.5, tnom: 0.125 },
-  { name: "HSS2x1x3/16", H: 2.0, B: 1.0, tnom: 0.1875 },
-  { name: "HSS2x1x1/8", H: 2.0, B: 1.0, tnom: 0.125 },
 ];
 
 const ROUND_HSS = [
@@ -748,22 +658,6 @@ const ROUND_HSS = [
   { name: "HSS3.000x0.152", D: 3.0, tnom: 0.152 },
   { name: "HSS3.000x0.134", D: 3.0, tnom: 0.134 },
   { name: "HSS3.000x0.125", D: 3.0, tnom: 0.125 },
-  { name: "HSS2.875x0.250", D: 2.88, tnom: 0.25 },
-  { name: "HSS2.875x0.203", D: 2.88, tnom: 0.203 },
-  { name: "HSS2.875x0.188", D: 2.88, tnom: 0.188 },
-  { name: "HSS2.875x0.125", D: 2.88, tnom: 0.125 },
-  { name: "HSS2.500x0.250", D: 2.5, tnom: 0.25 },
-  { name: "HSS2.500x0.188", D: 2.5, tnom: 0.188 },
-  { name: "HSS2.500x0.125", D: 2.5, tnom: 0.125 },
-  { name: "HSS2.375x0.250", D: 2.38, tnom: 0.25 },
-  { name: "HSS2.375x0.218", D: 2.38, tnom: 0.218 },
-  { name: "HSS2.375x0.188", D: 2.38, tnom: 0.188 },
-  { name: "HSS2.375x0.154", D: 2.38, tnom: 0.154 },
-  { name: "HSS2.375x0.125", D: 2.38, tnom: 0.125 },
-  { name: "HSS1.900x0.188", D: 1.9, tnom: 0.188 },
-  { name: "HSS1.900x0.145", D: 1.9, tnom: 0.145 },
-  { name: "HSS1.900x0.120", D: 1.9, tnom: 0.12 },
-  { name: "HSS1.660x0.140", D: 1.66, tnom: 0.14 },
 ];
 
 // SVG Section Graphics Component
@@ -912,7 +806,9 @@ export default function HSSSlendernessChecker() {
   // Perform slenderness calculations
   const calculations = useMemo(() => {
     const tnom = shape.tnom;
-    const tdes = tnom * tdes_factor;
+    // Round design thickness to 3 decimals per AISC Manual convention (Table 1-11/1-12),
+    // then propagate the rounded value through b, h, and λ. Matches AISC published ratios.
+    const tdes = Math.round(tnom * tdes_factor * 1000) / 1000;
     
     if (shapeType === 'round') {
       // Round HSS: λ = D/t, λr = 0.11(E/Fy)
@@ -1092,11 +988,11 @@ export default function HSSSlendernessChecker() {
             ['Clear Width (b = B - 3t)', `${calculations.b.toFixed(3)} in`],
           ]},
           { title: 'SLENDERNESS CALCULATION', rows: shapeType === 'round' ? [
-            ['Slenderness Ratio', `λ = D/t = ${calculations.D.toFixed(3)} / ${calculations.tdes.toFixed(3)} = ${calculations.lambda.toFixed(2)}`],
-            ['Limiting Ratio', `λr = 0.11(E/Fy) = 0.11 × (${E.toLocaleString()}/${Fy}) = ${calculations.lambda_r.toFixed(2)}`],
+            ['Slenderness Ratio', `λ = D/t = ${calculations.D.toFixed(3)} / ${calculations.tdes.toFixed(3)} = ${calculations.lambda.toFixed(1)}`],
+            ['Limiting Ratio', `λr = 0.11(E/Fy) = 0.11 × (${E.toLocaleString()}/${Fy}) = ${calculations.lambda_r.toFixed(1)}`],
           ] : [
-            ['Slenderness Ratio', `λ = ${calculations.checkType} = ${(calculations.checkType === 'h/t' ? calculations.h : calculations.b).toFixed(3)} / ${calculations.tdes.toFixed(3)} = ${calculations.lambda.toFixed(2)}`],
-            ['Limiting Ratio', `λr = 1.40√(E/Fy) = 1.40 × √(${E.toLocaleString()}/${Fy}) = ${calculations.lambda_r.toFixed(2)}`],
+            ['Slenderness Ratio', `λ = ${calculations.checkType} = ${(calculations.checkType === 'h/t' ? calculations.h : calculations.b).toFixed(3)} / ${calculations.tdes.toFixed(3)} = ${calculations.lambda.toFixed(1)}`],
+            ['Limiting Ratio', `λr = 1.40√(E/Fy) = 1.40 × √(${E.toLocaleString()}/${Fy}) = ${calculations.lambda_r.toFixed(1)}`],
           ]},
         ].map((section, si) => (
           <div key={si} style={{ marginBottom: '16px' }}>
@@ -1108,7 +1004,7 @@ export default function HSSSlendernessChecker() {
         ))}
         <div style={{ background: resultBgColor, border: `2px solid ${resultColor}`, padding: '14px', textAlign: 'center', marginBottom: '20px' }}>
           <span style={{ fontSize: '14px', fontWeight: 'bold', color: resultColor }}>
-            λ = {calculations.lambda.toFixed(2)} {calculations.isNonSlender ? '≤' : '>'} λr = {calculations.lambda_r.toFixed(2)} → {calculations.isNonSlender ? 'NON-SLENDER (OK)' : 'SLENDER (NG)'}
+            λ = {calculations.lambda.toFixed(1)} {calculations.isNonSlender ? '≤' : '>'} λr = {calculations.lambda_r.toFixed(1)} → {calculations.isNonSlender ? 'NON-SLENDER (OK)' : 'SLENDER (NG)'}
           </span>
         </div>
         <div style={{ marginBottom: '16px' }}>
@@ -1206,8 +1102,8 @@ export default function HSSSlendernessChecker() {
                   <td>{check.steelGrade}</td>
                   <td>{check.shapeType === 'rectangular' ? (check.connectionFace === 'wide' ? 'Wide' : 'Short') : '—'}</td>
                   <td style={{ textAlign: 'center' }}>{calc.checkType}</td>
-                  <td style={{ textAlign: 'center', fontFamily: 'monospace' }}>{calc.lambda.toFixed(2)}</td>
-                  <td style={{ textAlign: 'center', fontFamily: 'monospace' }}>{calc.lambda_r.toFixed(2)}</td>
+                  <td style={{ textAlign: 'center', fontFamily: 'monospace' }}>{calc.lambda.toFixed(1)}</td>
+                  <td style={{ textAlign: 'center', fontFamily: 'monospace' }}>{calc.lambda_r.toFixed(1)}</td>
                   <td style={{ textAlign: 'center', fontWeight: 'bold', color }}>{calc.isNonSlender ? '✓ PASS' : '✗ FAIL'}</td>
                 </tr>
               );
@@ -1274,7 +1170,7 @@ export default function HSSSlendernessChecker() {
         .header-badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; background: rgba(100, 255, 218, 0.1); border: 1px solid rgba(100, 255, 218, 0.2); border-radius: 16px; font-size: 11px; color: #64ffda; font-weight: 500; }
         .disclaimer { margin-top: 24px; padding: 16px 20px; background: rgba(255, 193, 7, 0.08); border: 1px solid rgba(255, 193, 7, 0.25); border-radius: 8px; display: flex; align-items: flex-start; gap: 12px; }
         .disclaimer-icon { font-size: 18px; flex-shrink: 0; }
-        .disclaimer-text { font-size: 11px; color: #b8c1d1; line-height: 1.6; }
+        .disclaimer-text { font-size: 12px; color: #e8e8e8; line-height: 1.6; }
         .reference-box { margin-top: 16px; padding: 12px 16px; background: rgba(100, 255, 218, 0.05); border: 1px solid rgba(100, 255, 218, 0.15); border-radius: 8px; }
         .reference-title { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #64ffda; margin-bottom: 6px; }
         .reference-text { font-size: 11px; color: #a8b2d1; line-height: 1.5; }
@@ -1293,14 +1189,11 @@ export default function HSSSlendernessChecker() {
             <h1 style={{ fontSize: '20px', fontWeight: '700', margin: 0, background: 'linear-gradient(135deg, #ffffff 0%, #a8b2d1 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', whiteSpace: 'nowrap' }}>HSS Column Slenderness Checker</h1>
             <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
               <span className="header-badge">AISC 360-22</span>
-              <span className="header-badge">{shapeType === 'square' ? 'Square' : shapeType === 'rectangular' ? 'Rect' : 'Round'} HSS</span>
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-            <span className="project-label">Project:</span>
-            <input type="text" className="project-input" style={{ width: '180px' }} value={projectName} onChange={(e) => setProjectName(e.target.value)} placeholder="Project name..." />
-            <span className="project-label">#:</span>
-            <input type="text" className="project-input" style={{ width: '120px' }} value={projectNumber} onChange={(e) => setProjectNumber(e.target.value)} placeholder="Number..." />
+            <input type="text" className="project-input" style={{ width: '180px' }} value={projectName} onChange={(e) => setProjectName(e.target.value)} placeholder="Project name" />
+            <input type="text" className="project-input" style={{ width: '120px' }} value={projectNumber} onChange={(e) => setProjectNumber(e.target.value)} placeholder="Project #" />
           </div>
         </div>
 
@@ -1327,10 +1220,15 @@ export default function HSSSlendernessChecker() {
               <div className="toggle-group">
                 {Object.entries(STEEL_GRADES).map(([key, val]) => (
                   <button key={key} className={`toggle-btn ${steelGrade === key ? 'active' : ''}`} onClick={() => setSteelGrade(key)} style={{ minWidth: '90px' }}>
-                    {key.replace('-', ' ')}
+                    {key === 'A500-B' ? 'A500 Gr. B' : key === 'A500-C' ? 'A500 Gr. C' : 'A1085'}
                   </button>
                 ))}
               </div>
+              {steelGrade === 'A500-B' && (
+                <div style={{ marginTop: '8px', padding: '8px 12px', background: 'rgba(255, 193, 7, 0.08)', border: '1px solid rgba(255, 193, 7, 0.2)', borderRadius: '6px', fontSize: '11px', color: '#e8d9a8', lineHeight: '1.5' }}>
+                  <strong style={{ color: '#ffc107' }}>Note:</strong> A500 Gr. B is no longer produced by U.S. mills and should not be specified for new projects. Included here for checks on existing columns (additions, renovations, or tie-ins to existing framing). Use A500 Gr. C for new construction.
+                </div>
+              )}
             </div>
 
             <div className="input-group">
@@ -1338,6 +1236,7 @@ export default function HSSSlendernessChecker() {
               <select className="select-input" value={selectedShape} onChange={(e) => setSelectedShape(e.target.value)}>
                 {availableShapes.map(s => (<option key={s.name} value={s.name}>{s.name}</option>))}
               </select>
+              <div style={{ fontSize: '11px', color: '#8892b0', marginTop: '4px' }}>Type to search — e.g. HSS8x8x1/4</div>
             </div>
 
             {shapeType === 'rectangular' && (
@@ -1401,19 +1300,17 @@ export default function HSSSlendernessChecker() {
               <div className="result-value">
                 {calculations.lambda.toFixed(1)} <span style={{ fontSize: '20px', color: '#8892b0' }}>/</span> {calculations.lambda_r.toFixed(1)}
               </div>
-              <div className="result-note">λ = {calculations.lambda.toFixed(2)} {calculations.isNonSlender ? '≤' : '>'} λr = {calculations.lambda_r.toFixed(2)}</div>
+              <div className="result-note">λ = {calculations.lambda.toFixed(1)} {calculations.isNonSlender ? '≤' : '>'} λr = {calculations.lambda_r.toFixed(1)}</div>
               <div style={{ marginTop: '12px', padding: '10px 16px', background: calculations.isNonSlender ? 'rgba(100, 255, 218, 0.1)' : 'rgba(255, 107, 107, 0.1)', borderRadius: '6px', fontSize: '13px', fontWeight: '500', color: calculations.isNonSlender ? '#64ffda' : '#ff6b6b' }}>
-                {calculations.isNonSlender 
-                  ? '✓ Shear tab connection to column face is acceptable' 
-                  : '✗ Shear tab connection to column face is not acceptable *'}
+                {calculations.isNonSlender
+                  ? '✓ Shear tab connection to column face is acceptable'
+                  : (<>
+                      <div>✗ Shear tab connection to column face is not acceptable</div>
+                      <div style={{ marginTop: '6px', fontSize: '12px', fontWeight: '400', color: '#c8d0e0', lineHeight: '1.5' }}>
+                        Contact SSE for alternative connection designs suitable for slender HSS columns (through-plates, WT sections, or knife angles).
+                      </div>
+                    </>)}
               </div>
-              {!calculations.isNonSlender && (
-                <div style={{ marginTop: '10px', padding: '10px 12px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '6px', borderLeft: '3px solid #ff6b6b' }}>
-                  <div style={{ fontSize: '11px', color: '#a8b2d1', lineHeight: '1.5' }}>
-                    <span style={{ color: '#ff6b6b', fontWeight: '600' }}>*</span> Contact SSE engineers for alternative connection designs suitable for slender HSS columns, such as through-plates, WT sections, or knife angle connections.
-                  </div>
-                </div>
-              )}
               {(projectName || projectNumber) && (
                 <div style={{ marginTop: '12px', fontSize: '11px', color: '#64ffda' }}>
                   {projectName && <span>{projectName}</span>}
@@ -1507,11 +1404,11 @@ export default function HSSSlendernessChecker() {
                         </div>
                         <div className="prop-item">
                           <div className="prop-label">λ = D/t</div>
-                          <div className="prop-value">{calculations.lambda.toFixed(2)}</div>
+                          <div className="prop-value">{calculations.lambda.toFixed(1)}</div>
                         </div>
                         <div className="prop-item">
                           <div className="prop-label">λr = 0.11(E/Fy)</div>
-                          <div className="prop-value">{calculations.lambda_r.toFixed(2)}</div>
+                          <div className="prop-value">{calculations.lambda_r.toFixed(1)}</div>
                         </div>
                       </>
                     ) : (
@@ -1534,11 +1431,11 @@ export default function HSSSlendernessChecker() {
                         </div>
                         <div className="prop-item">
                           <div className="prop-label">λ = {calculations.checkType}</div>
-                          <div className="prop-value">{calculations.lambda.toFixed(2)}</div>
+                          <div className="prop-value">{calculations.lambda.toFixed(1)}</div>
                         </div>
                         <div className="prop-item">
                           <div className="prop-label">λr = 1.40√(E/Fy)</div>
-                          <div className="prop-value">{calculations.lambda_r.toFixed(2)}</div>
+                          <div className="prop-value">{calculations.lambda_r.toFixed(1)}</div>
                         </div>
                       </>
                     )}
@@ -1560,7 +1457,7 @@ export default function HSSSlendernessChecker() {
             </div>
 
             <div style={{ fontSize: '11px', color: '#5a6785', textAlign: 'center', padding: '12px' }}>
-              Based on AISC 360-22 Specification • {gradeProps.description}
+              Based on AISC 360-22 Specification
             </div>
           </div>
         </div>
@@ -1651,8 +1548,8 @@ export default function HSSSlendernessChecker() {
                         <td style={{ padding: '10px', fontWeight: '600', color: '#e8e8e8' }}>{check.selectedShape}</td>
                         <td style={{ padding: '10px', color: '#a8b2d1' }}>{check.steelGrade}</td>
                         <td style={{ padding: '10px', textAlign: 'center', color: '#a8b2d1', fontFamily: "'IBM Plex Mono', monospace", fontSize: '12px' }}>{calc.checkType}</td>
-                        <td style={{ padding: '10px', textAlign: 'center', fontFamily: "'IBM Plex Mono', monospace", fontSize: '12px', color: '#e8e8e8' }}>{calc.lambda.toFixed(2)}</td>
-                        <td style={{ padding: '10px', textAlign: 'center', fontFamily: "'IBM Plex Mono', monospace", fontSize: '12px', color: '#8892b0' }}>{calc.lambda_r.toFixed(2)}</td>
+                        <td style={{ padding: '10px', textAlign: 'center', fontFamily: "'IBM Plex Mono', monospace", fontSize: '12px', color: '#e8e8e8' }}>{calc.lambda.toFixed(1)}</td>
+                        <td style={{ padding: '10px', textAlign: 'center', fontFamily: "'IBM Plex Mono', monospace", fontSize: '12px', color: '#8892b0' }}>{calc.lambda_r.toFixed(1)}</td>
                         <td style={{ padding: '10px', textAlign: 'center' }}>
                           <span style={{
                             display: 'inline-flex', alignItems: 'center', gap: '4px',
